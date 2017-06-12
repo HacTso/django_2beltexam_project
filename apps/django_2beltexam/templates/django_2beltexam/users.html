@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>users</title>
+</head>
+<body>
+	<div id="righttop">
+		<p><a href="/back">Dashboard</a>|
+		<a href="/logout">Logout</a></p>
+	</div>
+	<h1>Posts by {{ }}</h1>
+	<h1>Count: {{ quote.favourite.count}}</h1>
+	{% for f in favourites %}
+		{{ f.name }}: {{f.message}}
+	{% endfor %}
+</body>
+</html>

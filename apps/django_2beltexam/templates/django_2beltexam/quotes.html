@@ -1,0 +1,45 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+    	<div id="righttop">
+			<a href="/logout">Logout</a></p>
+		</div>
+        <div class="container">
+            <div class="row">
+                <h1>Welcome, {{ name }}!</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-md-offset-2">
+                    <h3>Quotable Quotes</h3>
+                </div>
+                <div class="col-md-3 col-md-offset-1">
+                    <h3>Your Favourite</h3>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <h3>Contribute a Quote</h3>
+                    <form action="/quotes_process" method="post">
+                    {% csrf_token %}
+                        <div class="form-group">
+                            <p><label for="author">Quote By:</label>
+                            <input type="text" class="form-control" name="author"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input type="text" class="form-control" name="message">
+                        </div>
+                        <button type="submit" class="btn btn-default pull-right">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+
